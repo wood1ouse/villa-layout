@@ -2149,7 +2149,7 @@ body.dot-hunter-open-more-z
 	transition-delay: 0.4s;
 }
 .point__modal__banner__ico__content {
-	background: url('/dev/resources/twitter-modal.svg') no-repeat;
+	background: url('../resources/twitter-modal.svg') no-repeat;
 	transform: scale(0.8);
 	width: 69px;
 	height: 56px;
