@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 88px;
+  background: #cbe3fb;
+  &__links__container {
+    width: 407px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 19px;
+    & li {
+      list-style-type: none;
+      & a{
+        text-decoration: none;
+        color: black;
+
+      }
+    }
+  }
+}

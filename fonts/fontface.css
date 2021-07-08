@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Better Together';
+    src: local('Better Together Script'), local('Better-Together-Script'),
+    url("../fonts/BetterTogetherScript.ttf");
+    font-weight: normal;
+    font-style: italic;
+}

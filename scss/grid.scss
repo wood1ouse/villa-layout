@@ -1,0 +1,7 @@
+.room__grid {
+  display: grid;
+  margin-top: 20px;
+  margin-left: 3px;
+  grid-gap: 3px;
+  grid-template-columns: repeat(6, 1fr);
+}

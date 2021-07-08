@@ -1,0 +1,55 @@
+@import "mixins";
+
+.outdoor {
+  display: flex;
+  margin-top: 35px;
+  &__title {
+    @include title-default;
+    font-size: 36px;
+    font-weight: normal;
+    margin-top: 53px;
+  }
+
+  &__line {
+    @include straight-line;
+    margin-top: 17px;
+    width: 135px;
+  }
+
+  &__image {
+    margin: 0;
+    background: url("../resources/mainview/Outdoor-6.jpg") no-repeat;
+    height: 380px;
+    width: 570px;
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    &__container {
+      width: 100%;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      & img {
+        width: 134px;
+        height: 90px;
+      }
+    }
+  }
+
+  & span {
+    margin-left: 25px;
+    line-height:  1.438;
+    & ul {
+      list-style: none;
+      padding-left: 0;
+      & li {
+        &::before{
+          content: '- ';
+        }
+      }
+    }
+  }
+}

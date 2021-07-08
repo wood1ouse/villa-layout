@@ -1,0 +1,55 @@
+@import "mixins";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @include title-default;
+    margin-top: 16px;
+    font-size: 36px;
+  }
+
+  &__line {
+    @include straight-line;
+    margin-top: 22px;
+    width: 85px;
+  }
+
+  &__villa {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    &.type__two{
+      & span {
+        margin: 0 26px 0 14px;
+
+      }
+    }
+
+    &__title {
+      @include title-secondary;
+      margin-top: 36px;
+    }
+
+    &__image {
+      @include image-default-size;
+      background: url("../resources/mainview/Villa1-54.jpg") no-repeat;
+      flex-grow: 0;
+      flex-shrink: 0;
+      &.type__two{
+        background: url("../resources/mainview/Villa2-4.jpg") no-repeat;
+      }
+
+    }
+    & span {
+      margin-left: 27px;
+      line-height: 1.533;
+      & p{
+        font-size: 16px;
+      }
+    }
+  }
+}

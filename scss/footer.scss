@@ -1,0 +1,37 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+  background-color: #cbe3fb;
+  height: 258px;
+
+  &__contact__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__logo {
+      margin-top: 26px;
+      background: url("../resources/footer/logo.png") no-repeat;
+      width: 210px;
+      height: 90px;
+    }
+    &__token {
+      display: flex;
+      margin-top: 6px;
+      & img, &__empty{
+        height: 18px;
+        width: 18px;
+      }
+      &__content {
+        margin-left: 6px;
+      }
+
+    }
+    &__map {
+      margin-right: 39px;
+      background: url("../resources/footer/map.jpg") no-repeat;
+      width: 100%;
+      height: 206px;
+    }
+  }
+}

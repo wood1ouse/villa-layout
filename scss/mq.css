@@ -1,0 +1,11 @@
+@media (width: 730px) {
+  .booking__title {
+    margin-top: -53%;
+  }
+
+  .services__blur__title {
+    margin-top: -45%;
+  }
+}
+
+/*# sourceMappingURL=mq.css.map */
