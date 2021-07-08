@@ -2053,7 +2053,7 @@ body.dot-hunter-open-more-z #visualBlockWidgetLGWG.widget-visual-block-mobile {
 	transition-delay: 0.4s;
 }
 .point__modal__banner__ico__content {
-	background: url('../resources/twitter-modal.svg') no-repeat;
+	background: url('/dev/resources/twitter-modal.svg') no-repeat;
 	transform: scale(0.8);
 	width: 69px;
 	height: 56px;
