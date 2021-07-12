@@ -1,0 +1,109 @@
+@import 'mixins';
+
+@include waitAnimate(
+	(
+		animationName: point,
+		keyframes: (
+			0: (
+				transform: scale(1),
+			),
+			25: (
+				transform: scale(1.1),
+			),
+			50: (
+				transform: scale(1),
+			),
+			100: (),
+		),
+		duration: 1,
+		waitTime: 5,
+		delay: 5,
+		timingFunction: ease,
+		iterationCount: infinite,
+	)
+);
+
+@include waitAnimate(
+	(
+		animationName: point__ico,
+		keyframes: (
+			0: (
+				transform: scale(1),
+			),
+			30: (
+				transform: scale(1.1),
+			),
+			70: (
+				transform: scale(0.9),
+			),
+			100: (
+				transform: scale(1),
+			),
+		),
+		duration: 1,
+		waitTime: 5,
+		delay: 5,
+		timingFunction: ease,
+		iterationCount: infinite,
+	)
+);
+
+@include waitAnimate(
+	(
+		animationName: point__signal__1,
+		keyframes: (
+			0: (
+				opacity: 1,
+				box-shadow: 1px 1px 0 9px rgb(163, 211, 242),
+			),
+			100: (
+				box-shadow: 1px 1px 0 50px rgb(163, 211, 242),
+			),
+		),
+		duration: 1,
+		delay: 6,
+		waitTime: 5,
+		timingFunction: linear,
+		iterationCount: infinite,
+	)
+);
+
+@include waitAnimate(
+	(
+		animationName: point__signal__2,
+		keyframes: (
+			0: (
+				opacity: 1,
+				box-shadow: 1px 1px 0 9px rgb(163, 211, 242),
+			),
+			100: (
+				box-shadow: 1px 1px 0 50px rgb(163, 211, 242),
+			),
+		),
+		duration: 1,
+		waitTime: 5,
+		delay: 6.4,
+		timingFunction: linear,
+		iterationCount: infinite,
+	)
+);
+
+@include waitAnimate(
+	(
+		animationName: point__signal__3,
+		keyframes: (
+			0: (
+				opacity: 1,
+				box-shadow: 1px 1px 0 9px rgb(163, 211, 242),
+			),
+			100: (
+				box-shadow: 1px 1px 0 50px rgb(163, 211, 242),
+			),
+		),
+		duration: 1,
+		delay: 6.8,
+		waitTime: 5,
+		timingFunction: linear,
+		iterationCount: infinite,
+	)
+);

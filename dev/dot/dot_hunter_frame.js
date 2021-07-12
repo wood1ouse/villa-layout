@@ -1,6 +1,14 @@
+
+
 /*************************************************************************
  *Set title, delete percent if need
  */
+
+
+
+
+
+
 var docTitle;
 (function () {
 	var docTitOld = window.top.document.title;
@@ -162,6 +170,28 @@ for (var i = 0; i < LeadWidgets.list.length; i++) {
 		
 		document.getElementById("widgetMainWr").innerHTML = template;
 	}
+const pointIco = document.querySelector('#lgWgIconFont')
+const signal1 = document.querySelector('.point__signal__1')
+const signal2 = document.querySelector('.point__signal__2')
+const signal3 = document.querySelector('.point__signal__3')
+
+
+let isOpened = false
+
+const pause = () => {
+    pointIco.style.animation = 'none'
+    signal1.style.animation = 'none'
+    signal2.style.animation = 'none'
+    signal3.style.animation = 'none'
+}
+
+const play = () => {
+    pointIco.style.animation = 'point__ico'
+    signal1.style.animation = 'point__signal__1 6s 6s linear infinite'
+    signal2.style.animation = 'point__signal__1 6s 6.4s linear infinite'
+    signal3.style.animation = 'point__signal__1 6s 6.8s linear infinite'
+}
+ 
 
 	function buildDynamicWidget() {
 		var widgetDynamic = "";
@@ -451,6 +481,7 @@ for (var i = 0; i < LeadWidgets.list.length; i++) {
 			document.getElementsByTagName("html")[0].style.overflow = "hidden";
 		}
 	}
+
 
 	function startAdaptiveIfNeed() {
 		setTimeout(function() {
@@ -1107,13 +1138,24 @@ for (var i = 0; i < LeadWidgets.list.length; i++) {
 			event.preventDefault();
 		});
 
+	
 
 		/********************************************************************
 		 *Open or hide widget
 		 */
+		let isOpened = false
+		let rot = 90
+		const icon = LGelementCallCircleNew.childNodes[0]
 		LGelementCallCircleNew.addEventListener(lgwgClickEvent, function() {
-			
-		    LGWGNewPulseCBDetect = true;
+			isOpened = !isOpened
+			LGelementCallCircleNew.style.transform = `rotate(${rot}deg)`
+			rot = isOpened ? 0 : rot + 90
+
+			if (isOpened) {
+				LGWGNewPulseCBDetect = true;
+				icon.className = 'fas fa-times'
+				icon.style.color = '#000'
+				icon.style.fontSize = '35px'
 		    // removePulse();
 		    LGwidgetPlashkaText.classList.add('lgwg-op-hid');
 			setTimeout(function() {
@@ -1122,18 +1164,24 @@ for (var i = 0; i < LeadWidgets.list.length; i++) {
 	    	}, 100);
 		    WidgetDotOnAnim();
 		    //LeadCore.pushTargetAction(0, widgetLGWGDotId);
+			} else {
+				icon.className = 'f30s-awesome fab fa-twitter'
+				icon.style.color = 'rgb(65, 171, 225)'
+				LGWGNewCloseBtn.classList.add('lgwg-op-hid-imp');
+				LGWGNewPulseCBDetect = false;
+				// addPulse();
+				WidgetDotOffAnim();
+				setTimeout(function() {
+					LGWGNewCloseBtn.classList.remove('lgwg-op-hid-imp');
+				}, 1000)
+			}
+		    
 		});
 
 
-		LGWGNewCloseBtn.addEventListener(lgwgClickEvent, function() {
-			this.classList.add('lgwg-op-hid-imp');
-			LGWGNewPulseCBDetect = false;
-			// addPulse();
-			WidgetDotOffAnim();
-			setTimeout(function() {
-				LGWGNewCloseBtn.classList.remove('lgwg-op-hid-imp');
-			}, 1000)
-		});
+		// LGWGNewCloseBtn.addEventListener(lgwgClickEvent, function() {
+			
+		// });
 
 		if (LGWGbtnExitLGWG) {
 			LGWGNewCloseBtn.classList.add("lgwg-none-imp-forever");
@@ -2305,4 +2353,7 @@ for (var i = 0; i < LeadWidgets.list.length; i++) {
 			LGWGIframeDotDiv.classList.add("lgwg-div-iframe-dot-mobile");
 		}
 	}
+
+	
+	
 })();

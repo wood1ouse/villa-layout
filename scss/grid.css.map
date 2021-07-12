@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["grid.scss"],"names":[],"mappings":"AAAA;EACE;EACA","file":"grid.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,GAAG;EAChB,QAAQ,EAAE,GAAG;EACb,qBAAqB,EAAE,cAAc;CACtC",
+    "sources": [
+        "grid.scss"
+    ],
+    "names": [],
+    "file": "grid.css"
+}

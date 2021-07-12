@@ -1,6 +1,33 @@
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 88px;
   background: #cbe3fb;
 }
 
+.header__links__container {
+  width: 407px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 19px;
+}
+
+.header__links__container li {
+  list-style-type: none;
+}
+
+.header__links__container li a {
+  text-decoration: none;
+  color: black;
+}
 /*# sourceMappingURL=header.css.map */

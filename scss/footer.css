@@ -1,3 +1,53 @@
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 42px;
+  background-color: #cbe3fb;
+  height: 258px;
+}
 
+.footer__contact__info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
+.footer__contact__info__logo {
+  margin-top: 26px;
+  background: url("../resources/footer/logo.png") no-repeat;
+  width: 210px;
+  height: 90px;
+}
+
+.footer__contact__info__token {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 6px;
+}
+
+.footer__contact__info__token img, .footer__contact__info__token__empty {
+  height: 18px;
+  width: 18px;
+}
+
+.footer__contact__info__token__content {
+  margin-left: 6px;
+}
+
+.footer__contact__info__map {
+  margin-right: 39px;
+  background: url("../resources/footer/map.jpg") no-repeat;
+  width: 100%;
+  height: 206px;
+}
 /*# sourceMappingURL=footer.css.map */

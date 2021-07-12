@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["preview.scss"],"names":[],"mappings":"AAAA;EACE","file":"preview.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,yCAAyC,CAAC,SAAS;EAC/D,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;CAuBxB;;AAtBE,AAAD,eAAQ,CAAC;EACP,WAAW,EAAE,wBAAwB;EACrC,KAAK,EAAE,IAAI;CAmBZ;;AAjBE,AAAD,mBAAK,EAAG,uBAAQ,CAAC;EACf,QAAQ,EAAE,QAAQ;CACnB;;AACA,AAAD,mBAAK,CAAC;EACJ,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,OAAO;CACnB;;AACA,AAAD,uBAAS,CAAC;EACR,UAAU,EAAE,KAAK;EACjB,WAAW,EAAE,KAAK;EAClB,SAAS,EAAE,QAAQ;CACpB;;AACA,AAAD,wBAAU,CAAC;EACT,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,QAAQ;CACpB",
+    "sources": [
+        "preview.scss"
+    ],
+    "names": [],
+    "file": "preview.css"
+}

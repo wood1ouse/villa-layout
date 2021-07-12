@@ -54,15 +54,23 @@ var divForFrameDot = document.createElement("div");
 	
 	var dotWidget = 
 		createLGWGElement( 'div', { id: 'widgetVisualDotCircle', class: 'widget-visual-block-dot start-position-lgwg-dot animClass05 '+setMobileClass(), style:'opacity:0;bottom:'+ (10+widgetDivPositionDotBottom()) +'px'},
+		
 			createLGWGElement( 'div', { id: 'widget2MainBlDot'+widgetLGWGDotId, class: 'widget2-main-bl'},
+				createLGWGElement('div', {class: 'point__signal__1'}),
+				createLGWGElement('div', {class: 'point__signal__2'}),
+				createLGWGElement('div', {class: 'point__signal__3'}),
+				
 				createLGWGElement( 'div', { class: 'widget2-plashka widget2-plash-start animClass02 lgwg-op-hid', style:'width:'+visualObjNewDot.dhVisual.widget_plash_width},
 					createLGWGElement( 'span', { class: 'widget2-plashka-text lgwg-op-hid'}, visualObjNewDot.dhVisual.title)
 				),
-				createLGWGElement( 'div', { class: 'lg-wg-w2-pulse1 lg-wg-pulse-el lg-wg-pulse-sh', style: 'box-shadow:inset 0px 0px 15px 10px '+visualObjNewDot.dhVisual.rgbaShadowForm1}),
-				createLGWGElement( 'div', { class: 'lg-wg-w2-pulse2 lg-wg-pulse-el lg-wg-pulse-sh', style: 'box-shadow:inset 0px 0px 12px 5px '+visualObjNewDot.dhVisual.rgbaShadowForm2}),
+				// createLGWGElement( 'div', { class: 'lg-wg-w2-pulse1 lg-wg-pulse-el lg-wg-pulse-sh', style: 'box-shadow:inset 0px 0px 15px 10px '+visualObjNewDot.dhVisual.rgbaShadowForm1}),
+				// createLGWGElement( 'div', { class: 'lg-wg-w2-pulse2 lg-wg-pulse-el lg-wg-pulse-sh', style: 'box-shadow:inset 0px 0px 12px 5px '+visualObjNewDot.dhVisual.rgbaShadowForm2}),
+				
 				createLGWGElement( 'div', { class: 'widget2', style: 'background:'+visualObjNewDot.dhVisual.colorMain},
+				
 					// createLGWGElement( 'div', { id: 'lgwgW2DotCircleFill1', class: 'lg-wg-w2-dot-circle-fill1 lg-wg-pulse-el', style: 'background:'+visualObjNewDot.dhVisual.colorBg}),
 					// createLGWGElement( 'div', { id: 'lgwgW2DotCircleFill2', class: 'lg-wg-w2-dot-circle-fill2 lg-wg-pulse-el', style: 'background:'+visualObjNewDot.dhVisual.colorMain}),
+					
 					createLGWGElement( 'i', { id: 'lgWgIconFont', class: getDotIcon(), style: 'color:'+visualObjNewDot.dhVisual.colorBg}),
 					createLGWGElement( 'div', { id:'lgWgDotCircleImg', class: 'lgwg-none-imp lg-wg-dot-circle-img'})
 				)
@@ -270,3 +278,59 @@ function loadSecondaryFuncLGWGDot() {
 		window.addEventListener('message', onmessageLGWG);
 	}
 }
+
+
+const point = document.querySelector('.widget2')
+const pointIco = document.querySelector('#lgWgIconFont')
+const signal1 = document.querySelector('.point__signal__1')
+const signal2 = document.querySelector('.point__signal__2')
+const signal3 = document.querySelector('.point__signal__3')
+const iframe = document.querySelector("#lgwgDivIframeDot iframe")
+
+let isOpened = false
+
+const innerDoc = (iframe.contentDocument) ? iframe.contentDocument : iframe.contentWindow.document
+
+
+// iframe.onload = () => {
+// 	const close = innerDoc.querySelector("#LGWGNewCloseBtn");
+// 	close.addEventListener('click', () => {
+// 		isOpened = false
+// 		play()
+// 	})
+// }
+
+
+
+	
+// console.log(innerDoc.querySelector('body div #visualBlockWidgetLGWG'));
+
+const pause = () => {
+    point.style.animation = 'none'
+    pointIco.style.animation = 'none'
+    signal1.style.animation = 'none'
+    signal2.style.animation = 'none'
+    signal3.style.animation = 'none'
+}
+
+const play = () => {
+    point.style.animation = 'point 6s 5s ease infinite'
+    pointIco.style.animation = 'point__ico'
+    signal1.style.animation = 'point__signal__1 6s 6s linear infinite'
+    signal2.style.animation = 'point__signal__1 6s 6.4s linear infinite'
+    signal3.style.animation = 'point__signal__1 6s 6.8s linear infinite'
+}
+
+point.addEventListener('mouseenter', () => {
+	pause()
+})
+
+point.addEventListener('mouseleave', () => {
+    isOpened ? pause() : play()
+})
+
+point.addEventListener('click', () => {
+	isOpened = !isOpened
+	isOpened ? pause() : play()
+})
+

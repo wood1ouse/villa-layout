@@ -1,3 +1,30 @@
+.delimiter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 22px;
+}
 
+.delimiter__line {
+  background: #00bfff;
+  width: 1000px;
+  height: 4px;
+}
 
+.delimiter__line__under {
+  background: #00bfff;
+  height: 2px;
+  width: 1025px;
+}
+
+.delimiter__line__under.layout {
+  margin-top: 21px;
+}
 /*# sourceMappingURL=delimeter.css.map */

@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["mq.scss"],"names":[],"mappings":"AAAA;EACE;IACE;;;EAEF;IACE","file":"mq.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,EAAE,SAAS,EAAE,MAAM;EACvB,AAAA,eAAe,EAAE,sBAAsB,CAAA;IACrC,UAAU,EAAE,IAAI;GACjB;EACD,AAAA,eAAe,CAAC;IACd,UAAU,EAAE,GAAG;GAChB",
+    "sources": [
+        "mq.scss"
+    ],
+    "names": [],
+    "file": "mq.css"
+}

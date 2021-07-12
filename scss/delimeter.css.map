@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"delimeter.css"}
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACT,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,IAAI;CAiBjB;;AAfE,AAAD,gBAAO,CAAC;EACN,UAAU,ECPC,OAAO;EDQlB,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,GAAG;CAWZ;;AATE,AAAD,uBAAQ,CAAC;EACP,UAAU,ECZD,OAAO;EDahB,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,MAAM;CAKd;;AARA,AAKC,uBALM,AAKL,OAAO,CAAC;EACP,UAAU,EAAE,IAAI;CACjB",
+    "sources": [
+        "delimeter.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "delimeter.css"
+}

@@ -1,6 +1,10 @@
 .room__grid {
+  display: -ms-grid;
   display: grid;
-  height: 530px;
+  margin-top: 20px;
+  margin-left: 3px;
+  grid-gap: 3px;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
 }
-
 /*# sourceMappingURL=grid.css.map */

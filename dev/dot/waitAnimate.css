@@ -1,0 +1,204 @@
+@-webkit-keyframes point {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	4.16667% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	8.33333% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	16.66667% {
+	}
+	100% {
+	}
+}
+
+@keyframes point {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	4.16667% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	8.33333% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	16.66667% {
+	}
+	100% {
+	}
+}
+
+.point {
+	-webkit-animation: point 6s 5s ease infinite;
+	animation: point 6s 5s ease infinite;
+}
+
+@-webkit-keyframes point__ico {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	5% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	11.66667% {
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+	16.66667% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes point__ico {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	5% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	11.66667% {
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+	16.66667% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+.point__ico {
+	-webkit-animation: point__ico 6s 5s ease infinite;
+	animation: point__ico 6s 5s ease infinite;
+}
+
+@-webkit-keyframes point__signal__1 {
+	0% {
+		opacity: 1;
+		-webkit-box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px #a3d3f2;
+	}
+	16.66667% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+	100% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+}
+
+@keyframes point__signal__1 {
+	0% {
+		opacity: 1;
+		-webkit-box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px #a3d3f2;
+	}
+	16.66667% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+	100% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+}
+
+.point__signal__1 {
+	-webkit-animation: point__signal__1 6s 6s linear infinite;
+	animation: point__signal__1 6s 6s linear infinite;
+}
+
+@-webkit-keyframes point__signal__2 {
+	0% {
+		opacity: 1;
+		-webkit-box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px #a3d3f2;
+	}
+	16.66667% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+	100% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+}
+
+@keyframes point__signal__2 {
+	0% {
+		opacity: 1;
+		-webkit-box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px #a3d3f2;
+	}
+	16.66667% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+	100% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+}
+
+.point__signal__2 {
+	-webkit-animation: point__signal__2 6s 6.4s linear infinite;
+	animation: point__signal__2 6s 6.4s linear infinite;
+}
+
+@-webkit-keyframes point__signal__3 {
+	0% {
+		opacity: 1;
+		-webkit-box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px #a3d3f2;
+	}
+	16.66667% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+	100% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+}
+
+@keyframes point__signal__3 {
+	0% {
+		opacity: 1;
+		-webkit-box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px #a3d3f2;
+	}
+	16.66667% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+	100% {
+		-webkit-box-shadow: 1px 1px 0 50px #a3d3f2;
+		box-shadow: 1px 1px 0 50px #a3d3f2;
+	}
+}
+
+.point__signal__3 {
+	-webkit-animation: point__signal__3 6s 6.8s linear infinite;
+	animation: point__signal__3 6s 6.8s linear infinite;
+}

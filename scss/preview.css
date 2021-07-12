@@ -1,5 +1,37 @@
 .preview {
-  background: url("mainview/Villa1-7.jpg") no-repeat;
+  background: url("../resources/mainview/Villa1-7.jpg") no-repeat;
+  background-size: 100%;
+  height: 710px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
+.preview__title {
+  font-family: "Better Together", serif;
+  color: #fff;
+}
+
+.preview__title__sv, .preview__title__villas {
+  position: absolute;
+}
+
+.preview__title__sv {
+  margin-top: 110px;
+  font-size: 53.51px;
+}
+
+.preview__title__villas {
+  margin-top: 120px;
+  margin-left: 160px;
+  font-size: 107.02px;
+}
+
+.preview__title__harmony {
+  margin-top: 191px;
+  font-size: 118.91px;
+}
 /*# sourceMappingURL=preview.css.map */

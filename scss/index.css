@@ -1,19 +1,31 @@
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   height: 88px;
   background: #cbe3fb;
 }
+
 .header__links__container {
   width: 407px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 19px;
 }
+
 .header__links__container li {
   list-style-type: none;
 }
+
 .header__links__container li a {
   text-decoration: none;
   color: black;
@@ -23,74 +35,105 @@
   background: url("../resources/mainview/Villa1-7.jpg") no-repeat;
   background-size: 100%;
   height: 710px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .preview__title {
   font-family: "Better Together", serif;
   color: #fff;
 }
+
 .preview__title__sv, .preview__title__villas {
   position: absolute;
 }
+
 .preview__title__sv {
   margin-top: 110px;
   font-size: 53.51px;
 }
+
 .preview__title__villas {
   margin-top: 120px;
   margin-left: 160px;
   font-size: 107.02px;
 }
+
 .preview__title__harmony {
   margin-top: 191px;
   font-size: 118.91px;
 }
 
 .welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 38px;
 }
+
 .welcome__title {
   color: #00bfff;
   font-weight: bold;
   font-size: 30px;
 }
+
 .welcome__line {
   height: 2px;
   background: #d4a564;
   margin-top: 23px;
   width: 245px;
 }
+
 .welcome__outdoor {
   margin-top: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .welcome__outdoor__img {
   background: url("../resources/mainview/Outdoor-35.jpg");
   width: 295px;
   height: 197px;
-  flex-grow: 0;
-  flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
+
 .welcome__outdoor span {
   margin: 7px 0 0 20px;
   line-height: 1.278;
 }
+
 .welcome__info__field {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
+
 .welcome__info__field__img {
   margin: 41px 0 0 0;
   background: url("../resources/mainview/Outdoor-10.jpg") no-repeat;
   width: 898px;
   height: 478px;
 }
+
 .welcome__info__field__label {
   background: #d19f59;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.29);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.29);
   margin: 66px 0 0 -224px;
   color: #fff;
   position: absolute;
@@ -98,25 +141,37 @@
   width: 499px;
   height: 344px;
 }
+
 .welcome__info__field__label p {
   margin-top: 2em;
-  padding: 0 44px 0 37px;
+  padding: 0 44px 0  37px;
 }
+
 .welcome__build__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 27px;
-  align-self: flex-start;
-  align-items: flex-end;
-  justify-content: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 .welcome__build__info__img {
   background: url("../resources/mainview/Outdoor-9.jpg") no-repeat;
   height: 551px;
   width: 824px;
 }
+
 .welcome__build__info__label {
   background: #00bfff;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.29);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.29);
   margin-right: -281px;
   margin-bottom: 32px;
   position: absolute;
@@ -125,32 +180,50 @@
   height: 319px;
   width: 392px;
 }
+
 .welcome__build__info__label ul {
   list-style-type: circle;
 }
 
 .booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 37px;
   background: url("../resources/mainview/bookingBack.jpg") no-repeat;
   background-size: 100%;
   height: 632px;
 }
+
 .booking__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   font-size: 24px;
   height: 233px;
   width: 554px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #fff;
 }
+
 .booking__title__button {
+  -webkit-transition: 1s;
   transition: 1s;
-  box-shadow: 0 10px 9px 0 rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 0 10px 9px 0 rgba(0, 0, 0, 0.29);
+          box-shadow: 0 10px 9px 0 rgba(0, 0, 0, 0.29);
   background: #d19f59;
   cursor: pointer;
   font-size: 24px;
@@ -159,64 +232,92 @@
   height: 54px;
   width: 259px;
 }
+
 .booking__title__button:hover {
   background: orange;
-  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 .layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .layout__title {
   color: #00bfff;
   font-weight: bold;
   margin-top: 16px;
   font-size: 36px;
 }
+
 .layout__line {
   height: 2px;
   background: #d4a564;
   margin-top: 22px;
   width: 85px;
 }
+
 .layout__villa {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 40px;
 }
+
 .layout__villa.type__two span {
   margin: 0 26px 0 14px;
 }
+
 .layout__villa__title {
   color: #7d7d7d;
   font-size: 30px;
   font-weight: bold;
   margin-top: 36px;
 }
+
 .layout__villa__image {
   height: 381px;
   width: 572px;
   background: url("../resources/mainview/Villa1-54.jpg") no-repeat;
-  flex-grow: 0;
-  flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
+
 .layout__villa__image.type__two {
   background: url("../resources/mainview/Villa2-4.jpg") no-repeat;
 }
+
 .layout__villa span {
   margin-left: 27px;
   line-height: 1.533;
 }
+
 .layout__villa span p {
   font-size: 16px;
 }
 
 .outdoor {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 35px;
 }
+
 .outdoor__title {
   color: #00bfff;
   font-weight: bold;
@@ -224,43 +325,62 @@
   font-weight: normal;
   margin-top: 53px;
 }
+
 .outdoor__line {
   height: 2px;
   background: #d4a564;
   margin-top: 17px;
   width: 135px;
 }
+
 .outdoor__image {
   margin: 0;
   background: url("../resources/mainview/Outdoor-6.jpg") no-repeat;
   height: 380px;
   width: 570px;
 }
+
 .outdoor__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .outdoor__images__container {
   width: 100%;
   margin-top: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 .outdoor__images__container img {
   width: 134px;
   height: 90px;
 }
+
 .outdoor span {
   margin-left: 25px;
   line-height: 1.438;
 }
+
 .outdoor span ul {
   list-style: none;
   padding-left: 0;
 }
+
 .outdoor span ul li::before {
-  content: "- ";
+  content: '- ';
 }
 
 .services__background {
@@ -269,34 +389,53 @@
   background-size: 100%;
   height: 533px;
 }
+
 .services__blur {
   background: url("../resources/mainview/services_blur.png") no-repeat;
   background-size: 100%;
   height: 533px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .services__blur__title {
   color: #fff;
   font-size: 30px;
 }
+
 .services__blur__line {
   margin-top: 24px;
   height: 2px;
   background: #d4a564;
   width: 231px;
 }
+
 .services__title {
   font-size: 30px;
   color: #fff;
   position: absolute;
 }
+
 .services__extra {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .services__extra__title {
   color: #00bfff;
   font-weight: bold;
@@ -304,25 +443,32 @@
   font-size: 30px;
   font-weight: normal;
 }
+
 .services__extra__line {
   height: 2px;
   background: #d4a564;
   margin-top: 23px;
   width: 244px;
 }
+
 .services__extra__requests {
   margin-top: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
+
 .services__extra__requests__col ul {
   margin: 6px 20px 0 0;
   list-style-image: url("../resources/custom-li/li.png");
 }
+
 .services__extra__requests__col ul li {
   width: 320px;
   font-size: 20px;
 }
+
 .services__extra__feedback {
   margin-top: 50px;
   color: #00bfff;
@@ -330,10 +476,13 @@
   font-weight: normal;
   font-size: 30px;
 }
+
 .services__extra__button {
   margin-top: 21px;
+  -webkit-transition: 1s;
   transition: 1s;
-  box-shadow: 0 10px 9px 0 rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 0 10px 9px 0 rgba(0, 0, 0, 0.29);
+          box-shadow: 0 10px 9px 0 rgba(0, 0, 0, 0.29);
   background: #d19f59;
   cursor: pointer;
   font-size: 24px;
@@ -342,24 +491,39 @@
   height: 54px;
   width: 259px;
 }
+
 .services__extra__button:hover {
   background: orange;
-  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
+
 .services__container {
   margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .services__container__item {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .services__container__item img {
   height: 45px;
   width: 45px;
 }
+
 .services__container__item__info {
   font-size: 16px;
   margin-top: 12px;
@@ -368,34 +532,51 @@
 }
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 42px;
   background-color: #cbe3fb;
   height: 258px;
 }
+
 .footer__contact__info {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .footer__contact__info__logo {
   margin-top: 26px;
   background: url("../resources/footer/logo.png") no-repeat;
   width: 210px;
   height: 90px;
 }
+
 .footer__contact__info__token {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 6px;
 }
+
 .footer__contact__info__token img, .footer__contact__info__token__empty {
   height: 18px;
   width: 18px;
 }
+
 .footer__contact__info__token__content {
   margin-left: 6px;
 }
+
 .footer__contact__info__map {
   margin-right: 39px;
   background: url("../resources/footer/map.jpg") no-repeat;
@@ -404,29 +585,41 @@
 }
 
 .room__grid {
+  display: -ms-grid;
   display: grid;
   margin-top: 20px;
   margin-left: 3px;
   grid-gap: 3px;
-  grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
 }
 
 .delimiter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 22px;
 }
+
 .delimiter__line {
   background: #00bfff;
   width: 1000px;
   height: 4px;
 }
+
 .delimiter__line__under {
   background: #00bfff;
   height: 2px;
   width: 1025px;
 }
+
 .delimiter__line__under.layout {
   margin-top: 21px;
 }
@@ -435,30 +628,43 @@
   .booking__title, .services__blur__title {
     margin-top: -25%;
   }
-
   .preview__title {
     margin-top: -5%;
   }
 }
+
 .wrapper {
   width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 390px;
 }
+
 .wrapper.footer {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 body {
   color: #363636;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 16px;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   margin: 0;
   padding: 0;
 }
-
 /*# sourceMappingURL=index.css.map */

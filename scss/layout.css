@@ -1,6 +1,72 @@
+.layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .layout__title {
   color: #00bfff;
   font-weight: bold;
+  margin-top: 16px;
+  font-size: 36px;
 }
 
+.layout__line {
+  height: 2px;
+  background: #d4a564;
+  margin-top: 22px;
+  width: 85px;
+}
+
+.layout__villa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+.layout__villa.type__two span {
+  margin: 0 26px 0 14px;
+}
+
+.layout__villa__title {
+  color: #7d7d7d;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 36px;
+}
+
+.layout__villa__image {
+  height: 381px;
+  width: 572px;
+  background: url("../resources/mainview/Villa1-54.jpg") no-repeat;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.layout__villa__image.type__two {
+  background: url("../resources/mainview/Villa2-4.jpg") no-repeat;
+}
+
+.layout__villa span {
+  margin-left: 27px;
+  line-height: 1.533;
+}
+
+.layout__villa span p {
+  font-size: 16px;
+}
 /*# sourceMappingURL=layout.css.map */

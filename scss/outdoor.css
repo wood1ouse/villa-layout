@@ -1,3 +1,72 @@
+.outdoor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 35px;
+}
 
+.outdoor__title {
+  color: #00bfff;
+  font-weight: bold;
+  font-size: 36px;
+  font-weight: normal;
+  margin-top: 53px;
+}
 
+.outdoor__line {
+  height: 2px;
+  background: #d4a564;
+  margin-top: 17px;
+  width: 135px;
+}
+
+.outdoor__image {
+  margin: 0;
+  background: url("../resources/mainview/Outdoor-6.jpg") no-repeat;
+  height: 380px;
+  width: 570px;
+}
+
+.outdoor__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.outdoor__images__container {
+  width: 100%;
+  margin-top: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.outdoor__images__container img {
+  width: 134px;
+  height: 90px;
+}
+
+.outdoor span {
+  margin-left: 25px;
+  line-height: 1.438;
+}
+
+.outdoor span ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.outdoor span ul li::before {
+  content: '- ';
+}
 /*# sourceMappingURL=outdoor.css.map */
