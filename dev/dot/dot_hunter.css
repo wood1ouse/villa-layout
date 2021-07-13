@@ -418,11 +418,11 @@
 }
 
 #widgetVisualDotCircle.widget-visual-block-dot {
-	will-change: bottom;
+	/* will-change: bottom; */
 	position: fixed;
 	bottom: 15px;
 	z-index: 9999999;
-	transition: bottom 0.5s linear;
+	/* transition: bottom 0.5s linear; */
 }
 #widgetVisualDotCircle.widget-visual-block-dot.start-position-lgwg-dot {
 	bottom: -120px !important;
@@ -430,16 +430,7 @@
 #visualBlockWidgetLGWG.widget-visual-block-mobile .widget-visual-block-dot {
 	bottom: -85px;
 }
-.widget2 {
-	animation: point 6s 5s ease infinite;
-	transition: tranform 0.3s, scale 0.3s;
-}
-.widget2:hover {
-	-webkit-transform: scale(1.2);
-	transform: scale(1.2);
-	-webkit-box-shadow: 1px 1px 15px 9px #f8f8f8;
-	box-shadow: 1px 1px 15px 9px #f8f8f8;
-}
+
 #widgetVisualDotCircle .widget2-main-bl {
 	display: flex;
 	position: relative;
@@ -565,6 +556,7 @@
 	justify-content: center;
 	align-items: center;
 	position: absolute;
+	/* animation: point 6s 5s ease infinite, appear 1s; */
 	top: 20px;
 	left: 20px;
 	background-color: #eee;
@@ -574,8 +566,6 @@
 	-moz-border-radius: 50% !important;
 	border-radius: 50% !important;
 	cursor: pointer;
-	-webkit-transition: 0.3s;
-	-moz-transition: 0.3s;
 	transition: 0.3s;
 	overflow: hidden;
 	z-index: 999999;
@@ -586,12 +576,33 @@
 #widgetVisualDotCircle .widget2:hover {
 	-webkit-box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.25);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-webkit-box-shadow: 1px 1px 15px 9px #f8f8f8;
+	box-shadow: 1px 1px 15px 9px #f8f8f8;
 	box-shadow: 0px 1px 30px 0px rgba(0, 0, 0, 0.25);
 }
+
 #widgetVisualDotCircle.dot-lgwg-is-active .widget2:hover {
 	-webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
 	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+	/* -webkit-transform: scale(1.2); */
+	/* transform: rotate(0) scale(1.2); */
+	/* -moz-transform: scale(1.2); */
+	-webkit-box-shadow: 1px 1px 15px 9px rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 1px 15px 9px rgba(0, 0, 0, 0.25);
+}
+
+/* #lgWgIconFont {
+	transition: 0.3s;
+} */
+
+#widgetVisualDotCircle.dot-lgwg-is-active .widget2:hover #lgWgIconFont {
+	-webkit-transform: scale(1.2);
+	transform: rotate(0) scale(1.2);
+	-moz-transform: scale(1.2);
 }
 
 #widgetVisualDotCircle .lg-wg-dot-circle-img {
@@ -1311,7 +1322,6 @@ html.mobile-lgwg-active-w {
 	margin-top: 10px;
 	width: 30px;
 	height: 30px;
-	animation: point__ico 300ms;
 }
 
 .point {
@@ -1330,9 +1340,6 @@ html.mobile-lgwg-active-w {
 		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
 	}
 }
-.point__signal__1 {
-	animation: point__signal__1 6s 6s linear infinite;
-}
 
 @keyframes point__signal__2 {
 	0% {
@@ -1346,9 +1353,6 @@ html.mobile-lgwg-active-w {
 		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
 	}
 }
-.point__signal__2 {
-	animation: point__signal__2 6s 6.4s linear infinite;
-}
 
 @keyframes point__signal__3 {
 	0% {
@@ -1361,9 +1365,6 @@ html.mobile-lgwg-active-w {
 	100% {
 		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
 	}
-}
-.point__signal__3 {
-	animation: point__signal__3 6s 6.8s linear infinite;
 }
 
 @keyframes point {
@@ -1380,19 +1381,16 @@ html.mobile-lgwg-active-w {
 		transform: scale(1);
 	}
 }
-.point {
-	animation: point 6s ease infinite;
-}
 
 @keyframes point__ico {
 	0% {
 		transform: scale(1);
 	}
 	5% {
-		transform: scale(1.3);
+		transform: scale(1.2);
 	}
 	11.6666666667% {
-		transform: scale(0.9);
+		transform: scale(0.8);
 	}
 	16.6666666667% {
 		transform: scale(1);
@@ -1401,8 +1399,17 @@ html.mobile-lgwg-active-w {
 		transform: scale(1);
 	}
 }
-.point__ico {
-	animation: point__ico 6s ease infinite;
+
+@keyframes appear {
+	0% {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 /*# sourceMappingURL=waitAnimate.css.map */

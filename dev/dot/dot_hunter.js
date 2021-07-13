@@ -53,7 +53,7 @@ var divForFrameDot = document.createElement("div");
 	}
 	
 	var dotWidget = 
-		createLGWGElement( 'div', { id: 'widgetVisualDotCircle', class: 'widget-visual-block-dot start-position-lgwg-dot animClass05 '+setMobileClass(), style:'opacity:0;bottom:'+ (10+widgetDivPositionDotBottom()) +'px'},
+		createLGWGElement( 'div', { id: 'widgetVisualDotCircle', class: 'widget-visual-block-dot start-position-lgwg-dot animClass05 '+setMobileClass(), style:'opacity:1;bottom:'+ (10+widgetDivPositionDotBottom()) +'px'},
 		
 			createLGWGElement( 'div', { id: 'widget2MainBlDot'+widgetLGWGDotId, class: 'widget2-main-bl'},
 				createLGWGElement('div', {class: 'point__signal__1'}),
@@ -163,10 +163,10 @@ var divForFrameDot = document.createElement("div");
 			//ifrm.contentWindow.document.getElementsByTagName("head")[0].appendChild(cssDPLink);
 			loadSecondaryFuncLGWGDot();
 			//Appear widget
-			setTimeout(function() {
+			
 				var dotCircleCl = document.getElementById('widgetVisualDotCircle');
 				dotCircleCl.style.opacity = "1";
-			}, 2000);
+			
 		}
 
 	    var doc = ifrm.contentWindow.document;
@@ -290,10 +290,6 @@ const iframe = document.querySelector("#lgwgDivIframeDot iframe")
 let isOpened = false
 
 
-
-	
-// console.log(innerDoc.querySelector('body div #visualBlockWidgetLGWG'));
-
 const pause = () => {
     point.style.animation = 'none'
     pointIco.style.animation = 'none'
@@ -304,10 +300,10 @@ const pause = () => {
 
 const play = () => {
     point.style.animation = 'point 6s 5s ease infinite'
-    pointIco.style.animation = 'point__ico'
-    signal1.style.animation = 'point__signal__1 6s 6s linear infinite'
-    signal2.style.animation = 'point__signal__1 6s 6.4s linear infinite'
-    signal3.style.animation = 'point__signal__1 6s 6.8s linear infinite'
+    pointIco.style.animation = 'point__ico 6s 5s ease infinite'
+    signal1.style.animation = 'point__signal__1 6s 6s ease-in infinite'
+    signal2.style.animation = 'point__signal__2 6s 6.4s ease-in infinite'
+    signal3.style.animation = 'point__signal__3 6s 6.8s ease-in infinite'
 }
 
 point.addEventListener('mouseenter', () => {
@@ -323,3 +319,18 @@ point.addEventListener('click', () => {
 	isOpened ? pause() : play()
 })
 
+window.onload = () => {
+	point.style.animation = 'appear .3s 2s ease 1'
+	pointIco.style.animation = 'point__ico 4s 2s ease 1'
+	signal1.style.animation = 'point__signal__1 6s 3s ease-in 1'
+    signal2.style.animation = 'point__signal__2 6s 3.4s ease-in 1'
+    signal3.style.animation = 'point__signal__3 6s 3.8s ease-in 1'
+
+	setTimeout(() => {
+		pause()
+	}, 4500);
+
+	setTimeout(() => {
+		play()
+	}, 4600);
+}
