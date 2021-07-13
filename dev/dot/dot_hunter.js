@@ -53,7 +53,7 @@ var divForFrameDot = document.createElement("div");
 	}
 	
 	var dotWidget = 
-		createLGWGElement( 'div', { id: 'widgetVisualDotCircle', class: 'widget-visual-block-dot start-position-lgwg-dot animClass05 '+setMobileClass(), style:'opacity:1;bottom:'+ (10+widgetDivPositionDotBottom()) +'px'},
+		createLGWGElement( 'div', { id: 'widgetVisualDotCircle', class: 'widget-visual-block-dot start-position-lgwg-dot animClass05 '+setMobileClass(), style:'opacity:0;bottom:'+ (10+widgetDivPositionDotBottom()) +'px'},
 		
 			createLGWGElement( 'div', { id: 'widget2MainBlDot'+widgetLGWGDotId, class: 'widget2-main-bl'},
 				createLGWGElement('div', {class: 'point__signal__1'}),
@@ -164,8 +164,6 @@ var divForFrameDot = document.createElement("div");
 			loadSecondaryFuncLGWGDot();
 			//Appear widget
 			
-				var dotCircleCl = document.getElementById('widgetVisualDotCircle');
-				dotCircleCl.style.opacity = "1";
 			
 		}
 
@@ -286,6 +284,7 @@ const signal1 = document.querySelector('.point__signal__1')
 const signal2 = document.querySelector('.point__signal__2')
 const signal3 = document.querySelector('.point__signal__3')
 const iframe = document.querySelector("#lgwgDivIframeDot iframe")
+const dotCircleCl = document.getElementById('widgetVisualDotCircle');
 
 let isOpened = false
 
@@ -320,11 +319,19 @@ point.addEventListener('click', () => {
 })
 
 window.onload = () => {
-	point.style.animation = 'appear .3s 2s ease 1'
-	pointIco.style.animation = 'point__ico 4s 2s ease 1'
-	signal1.style.animation = 'point__signal__1 6s 3s ease-in 1'
-    signal2.style.animation = 'point__signal__2 6s 3.4s ease-in 1'
-    signal3.style.animation = 'point__signal__3 6s 3.8s ease-in 1'
+
+	setTimeout(() => {
+		point.style.animation = 'appear .5s 2s ease 1'
+		pointIco.style.animation = 'point__ico 4s 2s ease 1'
+		signal1.style.animation = 'point__signal__1 6s 3s ease-in 1'
+    	signal2.style.animation = 'point__signal__2 6s 3.4s ease-in 1'
+    	signal3.style.animation = 'point__signal__3 6s 3.8s ease-in 1'
+	}, 500);
+
+	setTimeout(() => {
+		dotCircleCl.style.opacity = '1'
+	}, 2500)
+	
 
 	setTimeout(() => {
 		pause()

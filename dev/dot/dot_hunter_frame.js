@@ -525,7 +525,7 @@ const signal3 = document.querySelector('.point__signal__3')
 			LGVisualMainBlock.style.removeProperty('opacity');
 			LGVisualMainBlock.classList.remove('lgwg-op-hid-st');
 			dotCircleCl.classList.remove('start-position-lgwg-dot');
-		}, 1000);
+		}, 1500);
 	}
 
 	if ((window.top.screen.availWidth <= 760) && isMobile.any()) {

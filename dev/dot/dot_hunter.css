@@ -417,6 +417,10 @@
 	margin-left: 2px;
 }
 
+#widgetVisualDotCircle {
+	opacity: 0;
+}
+
 #widgetVisualDotCircle.widget-visual-block-dot {
 	/* will-change: bottom; */
 	position: fixed;
