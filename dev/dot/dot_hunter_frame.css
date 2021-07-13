@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Roboto:400,400italic,700,700italic|Roboto+Condensed:400,700,400italic,700italic|Lora:400,400italic,700,700italic|PT+Sans:400,400italic,700,700italic|Open+Sans+Condensed:300,700|Ubuntu:400,400italic,700,700italic|Roboto+Slab:400,700|Arimo:400,400italic,700,700italic|Merriweather:400,400italic,700,700italic|PT+Sans+Narrow:400,700|Noto+Sans:400,400italic,700,700italic|PT+Serif:400,400italic,700,700italic|Poiret+One|Playfair+Display:400,400italic,700,700italic|Lobster|Noto+Serif:400,400italic,700,700italic|Fira+Sans:400,400italic,700,700italic|Ubuntu+Condensed|Exo+2:400,400italic,700,700italic|Cuprum:400,400italic,700,700italic|Play:400,700|PT+Sans+Caption:400,700|Comfortaa:400,700|Russo+One|Philosopher:400,400italic,700,700italic|Rubik:400,700,700italic,400italic|Jura|Bad+Script|Marck+Script|Marmelad|Kelly+Slab|Forum|Tenor+Sans|Cousine:400,700,400italic,700italic|Ruslan+Display|Stalinist+One&subset=latin,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Cormorant+Infant:400,400i,700,700i|El+Messiri:400,700|Fira+Mono:400,700|Kurale|Neucha|PT+Mono|Pattaya|Press+Start+2P|Prosto+One|Rubik+Mono+One|Seymour+One|Ubuntu+Mono:400,400i,700,700i|Underdog&subset=cyrillic);
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 #visualBlockWidgetLGWG.lgwg-op-hid-st {
 	opacity: 0;
@@ -233,7 +233,7 @@ body:not(.mobile-version)
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-image: url('https://cdn.leadgenic.ru/dev/s2_icons/pulse_preloader.svg');
+	background-image: url("https://cdn.leadgenic.ru/dev/s2_icons/pulse_preloader.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -364,75 +364,75 @@ hr.style11 {
 }
 
 .webicon.linkedin {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-linkedin.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-linkedin.svg"),
 		#41b8d0;
 }
 .webicon.facebook {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-facebook.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-facebook.svg"),
 		#4b71b8;
 }
 .webicon.buffer {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-buffer.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-buffer.svg"),
 		#f5f5f5;
 }
 .webicon.pinterest {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-pinterest.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-pinterest.svg"),
 		#f93c2d;
 }
 .webicon.tumblr {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-tumblr.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-tumblr.svg"),
 		#2f4e68;
 }
 .webicon.yummly {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-yummly.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-yummly.svg"),
 		#fff;
 }
 .webicon.print {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-print.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-print.svg"),
 		#f5f5f5;
 }
 .webicon.blogger {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-blogger.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-blogger.svg"),
 		#ec9728;
 }
 .webicon.xing {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-xing.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-xing.svg"),
 		#057272;
 }
 .webicon.pocket {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-pocketapp.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-pocketapp.svg"),
 		#f5f5f5;
 }
 .webicon.digg {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-digg.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-digg.svg"),
 		#fff;
 }
 .webicon.googleplus {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-googleplus.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-googleplus.svg"),
 		#e16d35;
 }
 .webicon.odnoklassniki {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-odnoklassniki.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-odnoklassniki.svg"),
 		#fff;
 }
 .webicon.reddit {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-reddit.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-reddit.svg"),
 		#f5f5f5;
 }
 .webicon.stumbleupon {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-stumbleupon.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-stumbleupon.svg"),
 		#f93c2d;
 }
 .webicon.twitter {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-twitter.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-twitter.svg"),
 		#4bd0ef;
 }
 .webicon.vkontakte {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-vkontakte.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-vkontakte.svg"),
 		#fff;
 }
 .webicon.mail {
-	background: url('https://cdn.leadgenic.ru/dev/s_icons_1/webicon-mail.svg'),
+	background: url("https://cdn.leadgenic.ru/dev/s_icons_1/webicon-mail.svg"),
 		#f5f5f5;
 }
 
@@ -520,7 +520,7 @@ hr.style11 {
 	padding-left: 12px;
 	padding-right: 12px;
 	line-height: 1.6em !important;
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	height: auto;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -565,7 +565,7 @@ hr.style11 {
 	position: absolute;
 	margin: 0;
 	outline: none;
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .widget1 input.widget-input-border,
 .widget1 textarea.widget-input-border {
@@ -588,7 +588,7 @@ hr.style11 {
 	font-weight: normal;
 	white-space: nowrap;
 	overflow: hidden;
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .widget1 input.filled ~ label,
@@ -998,7 +998,7 @@ hr.style11 {
 	margin-bottom: 12px;
 }
 .thank-block-pop-adv-lgwg h1 {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0 !important;
 	text-transform: uppercase !important;
 	letter-spacing: normal !important;
@@ -1007,7 +1007,7 @@ hr.style11 {
 	font-weight: 700 !important;
 }
 .thank-block-pop-adv-lgwg h2 {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 8px 0 10px !important;
 	letter-spacing: normal !important;
 	font-size: 15px !important;
@@ -1016,7 +1016,7 @@ hr.style11 {
 }
 .thank-block-pop-adv-lgwg a.thank-btn-on-adv {
 	display: block !important;
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase !important;
 	font-size: 13px !important;
 	line-height: 36px !important;
@@ -1035,7 +1035,7 @@ hr.style11 {
 .thank-block-pop-adv-lgwg span {
 	display: block !important;
 	margin: 7px 0 4px !important;
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: transparent !important;
 	text-align: center !important;
 	color: #808080 !important;
@@ -1044,7 +1044,7 @@ hr.style11 {
 }
 .thank-block-pop-adv-lgwg div.thank-close-btn-adv {
 	display: inline-block !important;
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background: transparent !important;
 	margin: 0 auto !important;
 	text-align: center !important;
@@ -1354,7 +1354,7 @@ hr.style11 {
 }
 
 .visual-block-widget-lgwg-dot .widget1-form-bl label {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	display: block !important;
 	cursor: text !important;
 	position: absolute !important;
@@ -1443,7 +1443,7 @@ hr.style11 {
 	white-space: nowrap;
 }
 #visualBlockWidgetLGWG .widget2-plashka span {
-	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	line-height: 40px;
 }
@@ -1465,7 +1465,7 @@ hr.style11 {
 	left: auto;
 }
 #visualBlockWidgetLGWG .wv-bd-right .widget2-plashka:after {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 0;
 	height: 0;
@@ -1480,7 +1480,7 @@ hr.style11 {
 	margin-top: -4px;
 }
 #visualBlockWidgetLGWG .wv-bd-left .widget2-plashka:after {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 0;
 	height: 0;
@@ -1496,7 +1496,7 @@ hr.style11 {
 }
 
 #visualBlockWidgetLGWG .wv-bd-right .widget2-plashka:after {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 0;
 	height: 0;
@@ -1511,7 +1511,7 @@ hr.style11 {
 	margin-top: -9.9px;
 }
 #visualBlockWidgetLGWG .wv-bd-left .widget2-plashka:after {
-	content: '';
+	content: "";
 	position: absolute;
 	width: 0;
 	height: 0;
@@ -1701,11 +1701,11 @@ hr.style11 {
 }
 .visual-block-widget-lgwg-dot .lgwgnew-dot-footer-hid a.lgwg-new-dot-btn-f {
 	display: inline !important;
-	font-family: 'Roboto', sans-serif !important;
+	font-family: "Roboto", sans-serif !important;
 	color: #fff !important;
 	font-size: 12px !important;
 	padding: 0 0 0 17px !important;
-	background-image: url('https://cdn.leadgenic.ru/dev/s2_icons/cursor-arrow-red.svg') !important;
+	background-image: url("https://cdn.leadgenic.ru/dev/s2_icons/cursor-arrow-red.svg") !important;
 	background-position: left center !important;
 	background-repeat: no-repeat !important;
 	background-size: 13px 13px !important;
@@ -2061,7 +2061,6 @@ body.dot-hunter-open-more-z
 	margin-top: 11px;
 	width: 32px;
 	height: 32px;
-	/* background: url('../resources/twitter.svg') no-repeat; */
 	transition: transform 0.2s;
 }
 .point__signal__1,
@@ -2120,7 +2119,6 @@ body.dot-hunter-open-more-z
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	transition: opacity 0.1s;
 }
 .point__modal__banner,
 .point__modal__banner__ico,
@@ -2129,6 +2127,7 @@ body.dot-hunter-open-more-z
 .point__modal__form input,
 .point__modal__form button,
 .point__modal .point__promo {
+	opacity: 0;
 	transition: 0.2s opacity linear;
 }
 .point__modal__banner {
@@ -2136,7 +2135,7 @@ body.dot-hunter-open-more-z
 	width: 100%;
 	height: 80px;
 	background: #1ea1f2;
-	transition-delay: 0.2s;
+	transition-delay: 0.1s;
 }
 .point__modal__banner__ico {
 	background: #fff;
@@ -2148,10 +2147,10 @@ body.dot-hunter-open-more-z
 	border-radius: 50%;
 	box-shadow: 0 6px 5px -1px #f4f4f4;
 	margin: 12px auto 0 auto;
-	transition-delay: 0.4s;
+	transition-delay: 0.3s;
 }
 .point__modal__banner__ico__content {
-	background: url('../resources/twitter-modal.svg') no-repeat;
+	background: url("../resources/twitter-modal.svg") no-repeat;
 	transform: scale(0.8);
 	width: 69px;
 	height: 56px;
@@ -2159,13 +2158,13 @@ body.dot-hunter-open-more-z
 .point__modal__title {
 	color: #000;
 
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	width: 280px;
 	margin: 52px auto 0 auto;
 	font-weight: bold;
 	text-align: center;
 	height: 44px;
-	transition-delay: 0.6s;
+	transition-delay: 0.5s;
 }
 .point__modal__form {
 	margin-top: 33px;
@@ -2182,7 +2181,7 @@ body.dot-hunter-open-more-z
 	border: 1px solid #d5d7de;
 	width: 200px;
 	padding-left: 14px;
-	transition-delay: 0.8s;
+	transition-delay: 0.7s;
 }
 .point__modal__form input::placeholder {
 	color: #b1b6c2;
@@ -2196,7 +2195,7 @@ body.dot-hunter-open-more-z
 	border: 0;
 	color: #fff;
 	background-color: #1ea1f2;
-	transition-delay: 1s;
+	transition-delay: 0.9s;
 }
 .point__modal__container {
 	margin: 0 67px 67px 0;
@@ -2208,14 +2207,16 @@ body.dot-hunter-open-more-z
 	transition: width 0.2s, height 0.2s;
 }
 .point__promo {
-	margin: 0 439px 3px 0;
+	opacity: 0;
 	width: 208px;
 	height: 20px;
 	background-color: #161616;
 	position: absolute;
 	border-radius: 10px;
 	transition: opacity 0.3s;
-	transition-delay: 1.2s;
+	transition-delay: 0.1s;
+	margin-left: 90px;
+	margin-top: 7px;
 }
 .point__promo__logo {
 	border-radius: 50%;

@@ -160,13 +160,19 @@ for (var i = 0; i < LeadWidgets.list.length; i++) {
 						createLGWGElement( 'span', {}, 'или'),
 						createLGWGElement( 'div', { id: 'thank-close-btn-adv'+widgetLGWGDotId, class: 'thank-close-btn-adv'}, 'закрыть это окно')
 					)
+				),
+				createLGWGElement('div', {class: 'point__promo'},
+					createLGWGElement('div', {class: 'point__promo__container'},
+						createLGWGElement('div', {class: 'point__promo__logo'}),
+						createLGWGElement('div', {class: 'point__promo__text'}, 'Хотите такой же виджет на сайт?'),
+					)
 				)
 			)
 		);
 
 		document.getElementsByTagName("body")[0].appendChild(hlSmall);
 
-		var template = "<div id=\"widgetMaskContentLGWG\" class=\"widget-mask-content lgwg-none\"></div><ul class=\"wigdet-dot-main-wr "+LGWGService.classNameVerticalOrient(visualObjNewPopup.dhVisual)+"\" style=\"height:"+(((visualObjNewPopup.dhVisual.widget_content_heightpx*1)-60).toString())+"px\">"+buildDynamicWidget() + '<div class="point__modal__container"> <div class="point__modal"> <div class="point__modal__banner"> <div class="point__modal__banner__ico"> <div class="point__modal__banner__ico__content"></div></div></div><div class="point__modal__title" data-type="title">Подписывайтесь и читайте нас в Twitter</div><div class="point__modal__form"> <input type="text" placeholder="Введите телефон"> <button>Отправить</button> </div></div></div></div>' + "</ul>";
+		var template = "<div id=\"widgetMaskContentLGWG\" class=\"widget-mask-content lgwg-none\"></div><ul class=\"wigdet-dot-main-wr "+LGWGService.classNameVerticalOrient(visualObjNewPopup.dhVisual)+"\" style=\"height:"+(((visualObjNewPopup.dhVisual.widget_content_heightpx*1)-60).toString())+"px\">"+buildDynamicWidget() + '<div class="point__modal__container"> <div class="point__modal"> <div class="point__modal__banner"> <div class="point__modal__banner__ico"> <div class="point__modal__banner__ico__content"></div></div></div><div class="point__modal__title" data-type="title">Подписывайтесь и читайте нас в Twitter</div><div class="point__modal__form"> <input type="text" placeholder="Введите телефон"> <button>Отправить</button> </div></div></div></div> ' + "</ul>";
 		
 		document.getElementById("widgetMainWr").innerHTML = template;
 	}
@@ -176,21 +182,6 @@ const signal2 = document.querySelector('.point__signal__2')
 const signal3 = document.querySelector('.point__signal__3')
 
 
-let isOpened = false
-
-const pause = () => {
-    pointIco.style.animation = 'none'
-    signal1.style.animation = 'none'
-    signal2.style.animation = 'none'
-    signal3.style.animation = 'none'
-}
-
-const play = () => {
-    pointIco.style.animation = 'point__ico'
-    signal1.style.animation = 'point__signal__1 6s 6s linear infinite'
-    signal2.style.animation = 'point__signal__1 6s 6.4s linear infinite'
-    signal3.style.animation = 'point__signal__1 6s 6.8s linear infinite'
-}
  
 
 	function buildDynamicWidget() {
@@ -1143,19 +1134,44 @@ const play = () => {
 		/********************************************************************
 		 *Open or hide widget
 		 */
+
+
 		let isOpened = false
 		let rot = 90
 		const icon = LGelementCallCircleNew.childNodes[0]
+
+		const changeIco = (ico) => {
+			icon.style.background = `url("dev/resources/${ico}.svg") no-repeat`
+			icon.style.marginTop = isOpened ? '0' : '10px'
+		
+		}
+
+		const modal = document.querySelector('.point__modal')
+		const promo = document.querySelector('.point__promo')
+		const modalNodes = []
+
+		modal.childNodes.forEach(node => {
+			if (node.tagName !== undefined && node.hasChildNodes()) {
+					modalNodes.push(node)
+					modalNodes.push(...node.querySelectorAll('*'));
+			}
+	
+		})
+
+		modalNodes.push(promo)
+
+
 		LGelementCallCircleNew.addEventListener(lgwgClickEvent, function() {
 			isOpened = !isOpened
 			LGelementCallCircleNew.style.transform = `rotate(${rot}deg)`
 			rot = isOpened ? 0 : rot + 90
 
-			if (isOpened) {
+			modalNodes.forEach(node => {
+				node.style.opacity = isOpened ? '1' : '0'
+			})
+			if (isOpened) {				
 				LGWGNewPulseCBDetect = true;
-				icon.className = 'fas fa-times'
-				icon.style.color = '#000'
-				icon.style.fontSize = '35px'
+				changeIco('delete')
 		    // removePulse();
 		    LGwidgetPlashkaText.classList.add('lgwg-op-hid');
 			setTimeout(function() {
@@ -1163,10 +1179,17 @@ const play = () => {
 	    		LGwidgetPlashka.classList.add('widget2-plash-start');
 	    	}, 100);
 		    WidgetDotOnAnim();
+
+			
+
+
+
+		
+			
+
 		    //LeadCore.pushTargetAction(0, widgetLGWGDotId);
 			} else {
-				icon.className = 'f30s-awesome fab fa-twitter'
-				icon.style.color = 'rgb(65, 171, 225)'
+				changeIco('twitter')
 				LGWGNewCloseBtn.classList.add('lgwg-op-hid-imp');
 				LGWGNewPulseCBDetect = false;
 				// addPulse();

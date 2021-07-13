@@ -289,17 +289,6 @@ const iframe = document.querySelector("#lgwgDivIframeDot iframe")
 
 let isOpened = false
 
-const innerDoc = (iframe.contentDocument) ? iframe.contentDocument : iframe.contentWindow.document
-
-
-// iframe.onload = () => {
-// 	const close = innerDoc.querySelector("#LGWGNewCloseBtn");
-// 	close.addEventListener('click', () => {
-// 		isOpened = false
-// 		play()
-// 	})
-// }
-
 
 
 	

@@ -343,7 +343,7 @@ const widgetModel = {
             "widget_content_height":"Авто",
             "widget_content_heightpx":300,
             "widget_content_height_orient":"От верхней границы",
-            "selectedIcon":"fab fa-twitter",
+            "selectedIcon":"",
             "iconOrImage":"useIcon",
             "url":"https://static.leadgenic.com/lg_widgets_l11/img/image_def.jpg",
             "widget_width_all":"377px",
