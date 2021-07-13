@@ -323,21 +323,21 @@ window.onload = () => {
 	setTimeout(() => {
 		point.style.animation = 'appear .5s 2s ease 1'
 		pointIco.style.animation = 'point__ico 4s 2s ease 1'
-		signal1.style.animation = 'point__signal__1 6s 3s ease-in 1'
-    	signal2.style.animation = 'point__signal__2 6s 3.4s ease-in 1'
-    	signal3.style.animation = 'point__signal__3 6s 3.8s ease-in 1'
-	}, 500);
+		signal1.style.animation = 'point__signal__1 6s 4s ease-in 1'
+    	signal2.style.animation = 'point__signal__2 6s 4.4s ease-in 1'
+    	signal3.style.animation = 'point__signal__3 6s 4.8s ease-in 1'
+	}, 800);
 
 	setTimeout(() => {
 		dotCircleCl.style.opacity = '1'
-	}, 2500)
+	}, 2800)
 	
 
 	setTimeout(() => {
 		pause()
-	}, 4500);
+	}, 6000);
 
 	setTimeout(() => {
 		play()
-	}, 4600);
+	}, 6100);
 }
