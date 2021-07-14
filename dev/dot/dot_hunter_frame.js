@@ -172,7 +172,7 @@ for (var i = 0; i < LeadWidgets.list.length; i++) {
 
 		document.getElementsByTagName("body")[0].appendChild(hlSmall);
 
-		var template = "<div id=\"widgetMaskContentLGWG\" class=\"widget-mask-content lgwg-none\"></div><ul class=\"wigdet-dot-main-wr "+LGWGService.classNameVerticalOrient(visualObjNewPopup.dhVisual)+"\" style=\"height:"+(((visualObjNewPopup.dhVisual.widget_content_heightpx*1)-60).toString())+"px\">"+buildDynamicWidget() + '<div class="point__modal__container"> <div class="point__modal"> <div class="point__modal__banner"> <div class="point__modal__banner__ico"> <div class="point__modal__banner__ico__content"></div></div></div><div class="point__modal__title" data-type="title">Подписывайтесь и читайте нас в Twitter</div><div class="point__modal__form"> <input type="text" placeholder="Введите телефон"> <button>Отправить</button> </div></div></div></div> ' + "</ul>";
+		var template = "<div id=\"widgetMaskContentLGWG\" class=\"widget-mask-content lgwg-none\"></div><ul class=\"wigdet-dot-main-wr "+LGWGService.classNameVerticalOrient(visualObjNewPopup.dhVisual)+"\" style=\"height:"+(((visualObjNewPopup.dhVisual.widget_content_heightpx*1)-60).toString())+"px\">"+buildDynamicWidget() + '<li class="point__modal__container"> <div class="point__modal"> <div class="point__modal__banner"> <div class="point__modal__banner__ico"> <div class="point__modal__banner__ico__content"></div></div></div > <div class="point__modal__title" data-type="title">Подписывайтесь и читайте нас в Twitter</div > <div class="point__modal__form"> <input type="text" placeholder="Введите телефон"> <button>Отправить</button> </div > </div></li></ul>';
 		
 		document.getElementById("widgetMainWr").innerHTML = template;
 	}
@@ -1145,26 +1145,30 @@ const signal3 = document.querySelector('.point__signal__3')
 			// icon.style.animation = 'drill .3s'
 			// LGelementCallCircleNew.style.transform = `rotate(${rot}deg)`
 			icon.style.background = `url("dev/resources/${ico}.svg") no-repeat`
-			console.log(isOpened);
-			console.log(`rotate(${rot}deg)`);
 			icon.animate([
 				{transform: 'scale(1)'},
 				{transform: `scale(0.1) rotate(${rot}deg)`},
 				{transform: `scale(1) `}
 			], {duration: 300,
 				iterations: 1,
-				fill: "both"
+				fill: "backwards"
 			})
 			
 			icon.style.margin = isOpened ? '0 2px 0 0' : '10px 0 0 0'
 		
 		}
 
-		const modal = document.querySelector('.point__modal')
-		const promo = document.querySelector('.point__promo')
+		const mainNode = document.querySelector('#widgetMainWr ul')
+
 		const modalNodes = []
 
-		modal.childNodes.forEach(node => {
+		const mainWidget = document.querySelector('#LGWGWidgetAndCloseBlock').childNodes
+
+		const promo = mainWidget[mainWidget.length - 1]
+
+
+
+		mainNode.childNodes.forEach(node => {
 			if (node.tagName !== undefined && node.hasChildNodes()) {
 					modalNodes.push(node)
 					modalNodes.push(...node.querySelectorAll('*'));
@@ -1172,20 +1176,37 @@ const signal3 = document.querySelector('.point__signal__3')
 	
 		})
 
+
+
 		modalNodes.push(promo)
+		modalNodes.splice(0, 2)
 		
 
-
 		LGelementCallCircleNew.addEventListener(lgwgClickEvent, function() {
+			let delay = 10
 			isOpened = !isOpened
-			
-
 			modalNodes.forEach(node => {
-				node.style.opacity = isOpened ? '1' : '0'
+				node.animate([
+					{
+						opacity: isOpened ? '0' : '1',
+						transform: 'translateY(10px)'
+					},
+					{
+						opacity: isOpened ? '1' : '0',
+						transform: 'translateY(0)'
+					}
+				], {
+					duration: 400,
+					iterations: 1,
+					fill: "both",
+					delay: delay
+				})
+				delay+=100
 			})
 			if (isOpened) {				
 				LGWGNewPulseCBDetect = true;
 				changeIco('delete')
+				promo.style.visibility = 'visible'
 		    // removePulse();
 		    LGwidgetPlashkaText.classList.add('lgwg-op-hid');
 			setTimeout(function() {
@@ -1194,18 +1215,12 @@ const signal3 = document.querySelector('.point__signal__3')
 	    	}, 100);
 		    WidgetDotOnAnim();
 
-			
-
-
-
-		
-			
-
 		    //LeadCore.pushTargetAction(0, widgetLGWGDotId);
 			} else {
 				changeIco('twitter')
 				LGWGNewCloseBtn.classList.add('lgwg-op-hid-imp');
 				LGWGNewPulseCBDetect = false;
+				promo.style.visibility = 'hidden'
 				// addPulse();
 				WidgetDotOffAnim();
 				setTimeout(function() {

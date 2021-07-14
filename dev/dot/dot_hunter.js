@@ -306,7 +306,7 @@ const play = () => {
 }
 
 point.addEventListener('mouseenter', () => {
-	pointIco.style.transform = 'scale(1.1)'
+	pointIco.style.transform = 'scale(1.2)'
 	pause()
 })
 

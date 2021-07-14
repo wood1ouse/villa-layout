@@ -41,6 +41,10 @@
 	animation: point 6s 5s ease infinite;
 }
 
+.f30s lgiconfont-null {
+	transform: scale(1.6);
+}
+
 @-webkit-keyframes point__ico {
 	0% {
 		-webkit-transform: scale(1);

@@ -2128,14 +2128,14 @@ body.dot-hunter-open-more-z
 .point__modal__form button,
 .point__modal .point__promo {
 	opacity: 0;
-	transition: 0.2s opacity linear;
+	transition: 0.2s opacity linear, 0.2s transform linear;
 }
 .point__modal__banner {
 	border-radius: 10px 10px 0 0;
 	width: 100%;
 	height: 80px;
 	background: #1ea1f2;
-	transition-delay: 0.1s;
+	/* transition-delay: 0.1s; */
 }
 .point__modal__banner__ico {
 	background: #fff;
@@ -2147,7 +2147,7 @@ body.dot-hunter-open-more-z
 	border-radius: 50%;
 	box-shadow: 0 6px 5px -1px #f4f4f4;
 	margin: 12px auto 0 auto;
-	transition-delay: 0.3s;
+	/* transition-delay: 0.3s; */
 }
 .point__modal__banner__ico__content {
 	background: url("../resources/twitter-modal.svg") no-repeat;
@@ -2164,7 +2164,7 @@ body.dot-hunter-open-more-z
 	font-weight: bold;
 	text-align: center;
 	height: 44px;
-	transition-delay: 0.5s;
+	/* transition-delay: 0.5s; */
 }
 .point__modal__form {
 	margin-top: 33px;
@@ -2181,7 +2181,7 @@ body.dot-hunter-open-more-z
 	border: 1px solid #d5d7de;
 	width: 200px;
 	padding-left: 14px;
-	transition-delay: 0.7s;
+	/* transition-delay: 0.7s; */
 }
 .point__modal__form input::placeholder {
 	color: #b1b6c2;
@@ -2195,7 +2195,7 @@ body.dot-hunter-open-more-z
 	border: 0;
 	color: #fff;
 	background-color: #1ea1f2;
-	transition-delay: 0.9s;
+	/* transition-delay: 0.9s; */
 }
 .point__modal__container {
 	margin: 0 67px 67px 0;
@@ -2214,7 +2214,7 @@ body.dot-hunter-open-more-z
 	position: absolute;
 	border-radius: 10px;
 	transition: opacity 0.3s;
-	transition-delay: 0.1s;
+	/* transition-delay: 0.1s; */
 	margin-left: 90px;
 	margin-top: 7px;
 }
