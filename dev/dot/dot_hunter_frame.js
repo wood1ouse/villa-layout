@@ -1137,12 +1137,26 @@ const signal3 = document.querySelector('.point__signal__3')
 
 
 		let isOpened = false
-		let rot = 90
+		let rot = 180
 		const icon = LGelementCallCircleNew.childNodes[0]
 
 		const changeIco = (ico) => {
+			// icon.style.setProperty('background', `url(../resources/${ico}.svg) no-repeat`)
+			// icon.style.animation = 'drill .3s'
+			// LGelementCallCircleNew.style.transform = `rotate(${rot}deg)`
 			icon.style.background = `url("dev/resources/${ico}.svg") no-repeat`
-			icon.style.marginTop = isOpened ? '0' : '10px'
+			console.log(isOpened);
+			console.log(`rotate(${rot}deg)`);
+			icon.animate([
+				{transform: 'scale(1)'},
+				{transform: `scale(0.1) rotate(${rot}deg)`},
+				{transform: `scale(1) `}
+			], {duration: 300,
+				iterations: 1,
+				fill: "both"
+			})
+			
+			icon.style.margin = isOpened ? '0 2px 0 0' : '10px 0 0 0'
 		
 		}
 
@@ -1159,12 +1173,12 @@ const signal3 = document.querySelector('.point__signal__3')
 		})
 
 		modalNodes.push(promo)
+		
 
 
 		LGelementCallCircleNew.addEventListener(lgwgClickEvent, function() {
 			isOpened = !isOpened
-			LGelementCallCircleNew.style.transform = `rotate(${rot}deg)`
-			rot = isOpened ? 0 : rot + 90
+			
 
 			modalNodes.forEach(node => {
 				node.style.opacity = isOpened ? '1' : '0'

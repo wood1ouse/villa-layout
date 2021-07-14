@@ -115,14 +115,14 @@ ul.widget-main-ul-center {
 ul.widget-main-ul-auto {
 	height: auto !important;
 }
-ul.wigdet-dot-main-wr li {
+/* ul.wigdet-dot-main-wr li {
 	display: block;
 	width: 100%;
 	position: relative;
 	border: 1px dashed transparent;
 	margin: 0 0 0;
 	padding-bottom: 15px;
-}
+} */
 ul.wigdet-dot-main-wr li:last-child {
 	padding-bottom: 0;
 }

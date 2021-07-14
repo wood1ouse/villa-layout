@@ -60,7 +60,7 @@ var divForFrameDot = document.createElement("div");
 				createLGWGElement('div', {class: 'point__signal__2'}),
 				createLGWGElement('div', {class: 'point__signal__3'}),
 				
-				createLGWGElement( 'div', { class: 'widget2-plashka widget2-plash-start animClass02 lgwg-op-hid', style:'width:'+visualObjNewDot.dhVisual.widget_plash_width},
+				createLGWGElement( 'div', { class: 'widget2-plashka widget2-plash-start animClass02 lgwg-op-hid', style:'width: 230px; word-break: break-all; line-height: 0px;'},
 					createLGWGElement( 'span', { class: 'widget2-plashka-text lgwg-op-hid'}, visualObjNewDot.dhVisual.title)
 				),
 				// createLGWGElement( 'div', { class: 'lg-wg-w2-pulse1 lg-wg-pulse-el lg-wg-pulse-sh', style: 'box-shadow:inset 0px 0px 15px 10px '+visualObjNewDot.dhVisual.rgbaShadowForm1}),
@@ -306,10 +306,12 @@ const play = () => {
 }
 
 point.addEventListener('mouseenter', () => {
+	pointIco.style.transform = 'scale(1.1)'
 	pause()
 })
 
 point.addEventListener('mouseleave', () => {
+	pointIco.style.transform = 'scale(1)'
     isOpened ? pause() : play()
 })
 
@@ -330,7 +332,7 @@ window.onload = () => {
 
 	setTimeout(() => {
 		dotCircleCl.style.opacity = '1'
-	}, 2800)
+	}, 2900)
 	
 
 	setTimeout(() => {
