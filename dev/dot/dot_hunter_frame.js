@@ -1136,99 +1136,122 @@ const signal3 = document.querySelector('.point__signal__3')
 		 */
 
 
-		let isOpened = false
-		let rot = 180
-		const icon = LGelementCallCircleNew.childNodes[0]
+		 const pointContent = LGelementCallCircleNew.childNodes
 
-		const changeIco = (ico) => {
-			// icon.style.setProperty('background', `url(../resources/${ico}.svg) no-repeat`)
-			// icon.style.animation = 'drill .3s'
-			// LGelementCallCircleNew.style.transform = `rotate(${rot}deg)`
-			icon.style.background = `url("dev/resources/${ico}.svg") no-repeat`
-			icon.animate([
-				{transform: 'scale(1)'},
-				{transform: `scale(0.1) rotate(${rot}deg)`},
-				{transform: `scale(1) `}
-			], {duration: 300,
-				iterations: 1,
-				fill: "backwards"
+
+		 const getInitialBg = () => {
+			let bg, tag
+			pointContent.forEach(node => {
+				if (window.getComputedStyle(node,null).getPropertyValue("display") !== 'none') {
+					bg = window.getComputedStyle(node,null).getPropertyValue("background-image") + " no-repeat"
+					tag = node.tagName
+				}
+
 			})
-			
-			icon.style.margin = isOpened ? '0 2px 0 0' : '10px 0 0 0'
-		
+			return [bg, tag]
 		}
 
-		const mainNode = document.querySelector('#widgetMainWr ul')
-
-		const modalNodes = []
-
-		const mainWidget = document.querySelector('#LGWGWidgetAndCloseBlock').childNodes
-
-		const promo = mainWidget[mainWidget.length - 1]
-
-
-
-		mainNode.childNodes.forEach(node => {
-			if (node.tagName !== undefined && node.hasChildNodes()) {
-					modalNodes.push(node)
-					modalNodes.push(...node.querySelectorAll('*'));
-			}
-	
-		})
-
-
-
-		modalNodes.push(promo)
-		modalNodes.splice(0, 2)
+		let isOpened = false
+		let rot = 180
+		let initialBg = getInitialBg()[0]
 		
 
-		LGelementCallCircleNew.addEventListener(lgwgClickEvent, function() {
-			let delay = 10
-			isOpened = !isOpened
-			modalNodes.forEach(node => {
-				node.animate([
-					{
-						opacity: isOpened ? '0' : '1',
-						transform: 'translateY(10px)'
-					},
-					{
-						opacity: isOpened ? '1' : '0',
-						transform: 'translateY(0)'
-					}
-				], {
-					duration: 400,
-					iterations: 1,
-					fill: "both",
-					delay: delay
-				})
-				delay+=100
-			})
-			if (isOpened) {				
-				LGWGNewPulseCBDetect = true;
-				changeIco('delete')
-				promo.style.visibility = 'visible'
-		    // removePulse();
-		    LGwidgetPlashkaText.classList.add('lgwg-op-hid');
-			setTimeout(function() {
-	    		LGwidgetPlashka.classList.add('lgwg-op-hid');
-	    		LGwidgetPlashka.classList.add('widget2-plash-start');
-	    	}, 100);
-		    WidgetDotOnAnim();
+	
 
-		    //LeadCore.pushTargetAction(0, widgetLGWGDotId);
-			} else {
-				changeIco('twitter')
-				LGWGNewCloseBtn.classList.add('lgwg-op-hid-imp');
-				LGWGNewPulseCBDetect = false;
-				promo.style.visibility = 'hidden'
-				// addPulse();
-				WidgetDotOffAnim();
-				setTimeout(function() {
-					LGWGNewCloseBtn.classList.remove('lgwg-op-hid-imp');
-				}, 1000)
-			}
-		    
-		});
+
+		const changeIco = () => {
+			
+			pointContent.forEach(node => {
+				node.animate([
+					{transform: 'scale(1)'},
+					{transform: `scale(0.1) rotate(${rot}deg)`},
+					{transform: `scale(1) `}
+				], {duration: 300,
+					iterations: 1,
+					fill: "backwards"
+				})
+				node.style.background = isOpened ? `url("dev/resources/delete.svg") no-repeat` : initialBg
+				
+				getInitialBg()[1] === "I" ? (node.style.margin = isOpened ? '0 2px 0 0' : '10px 0 0 0') 
+				: node.style.backgroundSize = isOpened ? 'auto ' : 'cover '
+ 
+			})
+			
+			
+		}
+		 const mainNode = document.querySelector('#widgetMainWr ul')
+ 
+		 const modalNodes = []
+ 
+		 const mainWidget = document.querySelector('#LGWGWidgetAndCloseBlock').childNodes
+ 
+		 const promo = mainWidget[mainWidget.length - 1]
+ 
+ 
+		 mainNode.childNodes.forEach(node => {
+			 if (node.tagName !== undefined && node.hasChildNodes()) {
+					 modalNodes.push(node)
+					 modalNodes.push(...node.querySelectorAll('*'));
+			 }
+	 
+		 })
+ 
+ 
+ 
+		 modalNodes.push(promo)
+		 modalNodes.splice(0, 2)
+		 
+ 
+		 LGelementCallCircleNew.addEventListener(lgwgClickEvent, function() {
+			 let delay = 10
+
+			
+
+			 isOpened = !isOpened
+			 modalNodes.forEach(node => {
+				 node.animate([
+					 {
+						 opacity: isOpened ? '0' : '1',
+						 transform: 'translateY(10px)'
+					 },
+					 {
+						 opacity: isOpened ? '1' : '0',
+						 transform: 'translateY(0)'
+					 }
+				 ], {
+					 duration: 400,
+					 iterations: 1,
+					 fill: "both",
+					 delay: delay
+				 })
+				 delay+=100
+			 })
+			 if (isOpened) {				
+				 LGWGNewPulseCBDetect = true;
+				 changeIco()
+				 promo.style.visibility = 'visible'
+			 // removePulse();
+			 LGwidgetPlashkaText.classList.add('lgwg-op-hid');
+			 setTimeout(function() {
+				 LGwidgetPlashka.classList.add('lgwg-op-hid');
+				 LGwidgetPlashka.classList.add('widget2-plash-start');
+			 }, 100);
+			 WidgetDotOnAnim();
+ 
+			 //LeadCore.pushTargetAction(0, widgetLGWGDotId);
+			 } else {
+				 changeIco()
+				 LGWGNewCloseBtn.classList.add('lgwg-op-hid-imp');
+				 LGWGNewPulseCBDetect = false;
+				 promo.style.visibility = 'hidden'
+				 // addPulse();
+				 WidgetDotOffAnim();
+				 setTimeout(function() {
+					 LGWGNewCloseBtn.classList.remove('lgwg-op-hid-imp');
+				 }, 1000)
+			 }
+			 
+		 });
 
 
 		// LGWGNewCloseBtn.addEventListener(lgwgClickEvent, function() {
