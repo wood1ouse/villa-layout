@@ -293,7 +293,6 @@ function loadSecondaryFuncLGWGDot() {
 
 
 
-
 const point = document.querySelector('.widget2')
 const pointContent = point.childNodes
 const signal1 = document.querySelector('.point__signal__1')
@@ -382,6 +381,8 @@ point.addEventListener('click', () => {
 
 	isOpened ? pause() : play()
 })
+
+
 
 window.onload = () => {
 
