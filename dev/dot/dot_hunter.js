@@ -70,7 +70,6 @@ var divForFrameDot = document.createElement("div");
 				
 					// createLGWGElement( 'div', { id: 'lgwgW2DotCircleFill1', class: 'lg-wg-w2-dot-circle-fill1 lg-wg-pulse-el', style: 'background:'+visualObjNewDot.dhVisual.colorBg}),
 					// createLGWGElement( 'div', { id: 'lgwgW2DotCircleFill2', class: 'lg-wg-w2-dot-circle-fill2 lg-wg-pulse-el', style: 'background:'+visualObjNewDot.dhVisual.colorMain}),
-					
 					createLGWGElement( 'i', { id: 'lgWgIconFont', class: getDotIcon(), style: 'color:'+visualObjNewDot.dhVisual.colorBg}),
 					createLGWGElement( 'div', { id:'lgWgDotCircleImg', class: 'lgwg-none-imp lg-wg-dot-circle-img'})
 				)
@@ -84,7 +83,15 @@ var divForFrameDot = document.createElement("div");
 
 	dotWidgetStyle();
 
+
+
 	function dotWidgetStyle() {
+
+
+		
+
+
+
 		//Placement for widget
 		if (visualObjNewDot.dhVisual.place === LeadCore.constants.leftBottomCorner) {
 			dotCircleCl.classList.add('wv-bd-left');
@@ -107,6 +114,9 @@ var divForFrameDot = document.createElement("div");
 			lgWgIconFont.classList.remove('lgwg-none-imp');
 		}
 	}
+
+	
+
 })();
 
 (function () {
@@ -179,6 +189,7 @@ var divForFrameDot = document.createElement("div");
 
 	}
 	//prepareFrame();
+
 
 	// test
 	if (!document.hidden) {
@@ -278,8 +289,13 @@ function loadSecondaryFuncLGWGDot() {
 }
 
 
+
+
+
+
+
 const point = document.querySelector('.widget2')
-const pointIco = document.querySelector('#lgWgIconFont')
+const pointContent = point.childNodes
 const signal1 = document.querySelector('.point__signal__1')
 const signal2 = document.querySelector('.point__signal__2')
 const signal3 = document.querySelector('.point__signal__3')
@@ -287,36 +303,83 @@ const iframe = document.querySelector("#lgwgDivIframeDot iframe")
 const dotCircleCl = document.getElementById('widgetVisualDotCircle');
 
 let isOpened = false
+let paused = false
 
 
 const pause = () => {
+	pointContent.forEach(node => {
+		node.style.animation = 'none'
+	})
     point.style.animation = 'none'
-    pointIco.style.animation = 'none'
     signal1.style.animation = 'none'
     signal2.style.animation = 'none'
     signal3.style.animation = 'none'
+	paused = true
 }
 
 const play = () => {
-    point.style.animation = 'point 6s 5s ease infinite'
-    pointIco.style.animation = 'point__ico 6s 5s ease infinite'
-    signal1.style.animation = 'point__signal__1 6s 6s ease-in infinite'
-    signal2.style.animation = 'point__signal__2 6s 6.4s ease-in infinite'
-    signal3.style.animation = 'point__signal__3 6s 6.8s ease-in infinite'
+	pointContent.forEach(node => {
+		node.style.animation = 'point__ico 5s 4s ease infinite'
+	})
+    point.style.animation = 'point 5s 4s ease infinite'
+    signal1.style.animation = 'point__signal__1 5s 5s ease-in infinite'
+    signal2.style.animation = 'point__signal__2 5s 5.4s ease-in infinite'
+    signal3.style.animation = 'point__signal__3 5s 5.8s ease-in infinite'
+	paused = false
 }
 
+const scale = (element, from, to) => {
+	return element.animate([
+		{transform: `scale(${from})`},
+		{transform: `scale(${to})`}
+	], {
+		duration: 300,
+		iterations: 1,
+		fill: "forwards"
+	})
+}
+
+ 
 point.addEventListener('mouseenter', () => {
-	pointIco.style.transform = 'scale(1.2)'
+	pointContent.forEach(node => {
+		scale(node, 1, 1.2)
+	})
 	pause()
 })
 
 point.addEventListener('mouseleave', () => {
-	pointIco.style.transform = 'scale(1)'
+	pointContent.forEach(node => {
+		scale(node, 1.2, 1)
+	})
     isOpened ? pause() : play()
 })
 
+
+const detectLightOrDarkDot = () => {
+	const colorString = visualObjNewDot.dhVisual.colorMain
+	
+	if (colorString === "rgba(255, 255, 255, 1);") {
+		return 
+	}
+	colorsOnly = colorString.substring(colorString.indexOf('(') + 1, colorString.lastIndexOf(')')).split(/,\s*/)
+	components = {};
+	components.red = colorsOnly[0];
+	components.green = colorsOnly[1];
+	components.blue = colorsOnly[2];
+	components.opacity = colorsOnly[3];
+	return (1 - (0.299 * components.red + 0.587 * components.green + 0.114 * components.blue) / 255 < 0.5);
+}
+
 point.addEventListener('click', () => {
 	isOpened = !isOpened
+
+	const isLight = detectLightOrDarkDot()
+	if (typeof isLight !== 'undefined') {
+		pointContent.forEach(node => {
+			isOpened ? (node.style.filter = isLight ? 'invert(1)' : 'brightness(0) invert(1)') : (node.style.filter = 'none')
+		})
+	}
+
 	isOpened ? pause() : play()
 })
 
@@ -324,7 +387,9 @@ window.onload = () => {
 
 	setTimeout(() => {
 		point.style.animation = 'appear .5s 2s ease 1'
-		pointIco.style.animation = 'point__ico 4s 2s ease 1'
+		pointContent.forEach(node => {
+			node.style.animation = 'point__ico 4s 2s ease 1'
+		})
 		signal1.style.animation = 'point__signal__1 6s 4s ease-in 1'
     	signal2.style.animation = 'point__signal__2 6s 4.4s ease-in 1'
     	signal3.style.animation = 'point__signal__3 6s 4.8s ease-in 1'
@@ -340,6 +405,6 @@ window.onload = () => {
 	}, 6000);
 
 	setTimeout(() => {
-		play()
+		!isOpened && play()
 	}, 6100);
 }
