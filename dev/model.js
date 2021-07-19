@@ -332,7 +332,7 @@ const widgetModel = {
             "title":"Подписывайтесь на нас в Twitter!",
             "colorMain":"rgba(255, 255, 255, 1);",
             "place":"Правый нижний угол",
-            "colorBg":"#fff",
+            "colorBg":"rgba(65, 171, 225, 0.6)",
             "rgbaShadowForm1":"rgba(65, 171, 225, 0.6);",
             "rgbaShadowForm2":"rgba(65, 171, 225, 0.8);",
             "widget_width":"Собственная",

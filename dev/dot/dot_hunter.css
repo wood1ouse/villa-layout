@@ -1161,9 +1161,7 @@ html.mobile-lgwg-active-w {
 	/* background: url("../resources/twitter.svg") no-repeat; */
 	transition: transform 0.2s;
 }
-.point__signal__1,
-.point__signal__2,
-.point__signal__3 {
+.point__signal {
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -1347,41 +1345,45 @@ html.mobile-lgwg-active-w {
 @keyframes point__signal__1 {
 	0% {
 		opacity: 1;
-		box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px;
 	}
 	16.6666666667% {
-		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
+		box-shadow: 1px 1px 0 50px rgba(0, 0, 0, 0);
 	}
 	100% {
-		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
+		box-shadow: 1px 1px 0 50px rgba(0, 0, 0, 0);
 	}
 }
 
 @keyframes point__signal__2 {
 	0% {
 		opacity: 1;
-		box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px;
 	}
 	16.6666666667% {
-		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
+		box-shadow: 1px 1px 0 50px rgba(0, 0, 0, 0);
 	}
 	100% {
-		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
+		box-shadow: 1px 1px 0 50px rgba(0, 0, 0, 0);
 	}
 }
 
 @keyframes point__signal__3 {
 	0% {
 		opacity: 1;
-		box-shadow: 1px 1px 0 9px #a3d3f2;
+		box-shadow: 1px 1px 0 9px;
 	}
 	16.6666666667% {
-		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
+		box-shadow: 1px 1px 0 50px rgba(0, 0, 0, 0);
 	}
 	100% {
-		box-shadow: 1px 1px 0 50px rgba(163, 211, 242, 0);
+		box-shadow: 1px 1px 0 50px rgba(0, 0, 0, 0);
 	}
 }
+
+/*
+5% 
+*/
 
 @keyframes point {
 	0% {
@@ -1390,7 +1392,7 @@ html.mobile-lgwg-active-w {
 	5% {
 		transform: scale(1.2);
 	}
-	16.6666666667% {
+	15% {
 		transform: scale(1);
 	}
 	100% {
@@ -1405,7 +1407,7 @@ html.mobile-lgwg-active-w {
 	5% {
 		transform: scale(1.2);
 	}
-	11.6666666667% {
+	15% {
 		transform: scale(0.8);
 	}
 	16.6666666667% {
@@ -1420,7 +1422,7 @@ html.mobile-lgwg-active-w {
 	0% {
 		transform: scale(0);
 	}
-	50% {
+	70% {
 		transform: scale(1.2);
 	}
 	100% {

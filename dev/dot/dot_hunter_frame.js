@@ -176,10 +176,7 @@ for (var i = 0; i < LeadWidgets.list.length; i++) {
 		
 		document.getElementById("widgetMainWr").innerHTML = template;
 	}
-const pointIco = document.querySelector('#lgWgIconFont')
-const signal1 = document.querySelector('.point__signal__1')
-const signal2 = document.querySelector('.point__signal__2')
-const signal3 = document.querySelector('.point__signal__3')
+
 
 
  
@@ -1091,9 +1088,10 @@ const signal3 = document.querySelector('.point__signal__3')
 			LGwidgetPlashka.classList.add('lgwg-none');
 		}
 
-		//Pulse or not animation for dot circle
+
+		// Pulse or not animation for dot circle
 		if (visualObjNewPopup.dhVisual.enableBlink === true) {
-			var pulseElementsArray = window.top.document.getElementsByClassName('lg-wg-pulse-el');
+			var pulseElementsArray = window.top.document.getElementsByClassName('point__signal');
 			for (var i=0; i < pulseElementsArray.length; i++) {
 				pulseElementsArray[i].classList.add('lgwg-none-imp');
 			}

@@ -56,9 +56,9 @@ var divForFrameDot = document.createElement("div");
 		createLGWGElement( 'div', { id: 'widgetVisualDotCircle', class: 'widget-visual-block-dot start-position-lgwg-dot animClass05 '+setMobileClass(), style:'opacity:0;bottom:'+ (10+widgetDivPositionDotBottom()) +'px'},
 		
 			createLGWGElement( 'div', { id: 'widget2MainBlDot'+widgetLGWGDotId, class: 'widget2-main-bl'},
-				createLGWGElement('div', {class: 'point__signal__1'}),
-				createLGWGElement('div', {class: 'point__signal__2'}),
-				createLGWGElement('div', {class: 'point__signal__3'}),
+				createLGWGElement('div', {class: 'point__signal first', style: 'color: ' + visualObjNewDot.dhVisual.rgbaShadowForm1}),
+				createLGWGElement('div', {class: 'point__signal second', style: 'color: ' + visualObjNewDot.dhVisual.rgbaShadowForm2}),
+				createLGWGElement('div', {class: 'point__signal third', style: 'color: ' + visualObjNewDot.dhVisual.rgbaShadowForm2}),
 				
 				createLGWGElement( 'div', { class: 'widget2-plashka widget2-plash-start animClass02 lgwg-op-hid', style:'width: 230px; word-break: break-all; line-height: 0px;'},
 					createLGWGElement( 'span', { class: 'widget2-plashka-text lgwg-op-hid'}, visualObjNewDot.dhVisual.title)
@@ -292,12 +292,11 @@ function loadSecondaryFuncLGWGDot() {
 
 
 
-
 const point = document.querySelector('.widget2')
 const pointContent = point.childNodes
-const signal1 = document.querySelector('.point__signal__1')
-const signal2 = document.querySelector('.point__signal__2')
-const signal3 = document.querySelector('.point__signal__3')
+const signal1 = document.querySelector('.point__signal.first')
+const signal2 = document.querySelector('.point__signal.second')
+const signal3 = document.querySelector('.point__signal.third')
 const iframe = document.querySelector("#lgwgDivIframeDot iframe")
 const dotCircleCl = document.getElementById('widgetVisualDotCircle');
 
@@ -314,6 +313,9 @@ const pause = () => {
     signal2.style.animation = 'none'
     signal3.style.animation = 'none'
 	paused = true
+	pointContent.forEach(node => {
+		console.log(node.style.animation);
+	})
 }
 
 const play = () => {
@@ -325,16 +327,20 @@ const play = () => {
     signal2.style.animation = 'point__signal__2 5s 5.4s ease-in infinite'
     signal3.style.animation = 'point__signal__3 5s 5.8s ease-in infinite'
 	paused = false
+	pointContent.forEach(node => {
+		console.log(node.style.animation);
+	})
+	
 }
 
 const scale = (element, from, to) => {
+	element.style.transform = `scale(${to})`
 	return element.animate([
 		{transform: `scale(${from})`},
 		{transform: `scale(${to})`}
 	], {
 		duration: 300,
 		iterations: 1,
-		fill: "forwards"
 	})
 }
 
@@ -349,8 +355,10 @@ point.addEventListener('mouseenter', () => {
 point.addEventListener('mouseleave', () => {
 	pointContent.forEach(node => {
 		scale(node, 1.2, 1)
+
 	})
     isOpened ? pause() : play()
+
 })
 
 
@@ -380,6 +388,7 @@ point.addEventListener('click', () => {
 	}
 
 	isOpened ? pause() : play()
+
 })
 
 
@@ -394,6 +403,7 @@ window.onload = () => {
 		signal1.style.animation = 'point__signal__1 6s 4s ease-in 1'
     	signal2.style.animation = 'point__signal__2 6s 4.4s ease-in 1'
     	signal3.style.animation = 'point__signal__3 6s 4.8s ease-in 1'
+
 	}, 800);
 
 	setTimeout(() => {
@@ -403,9 +413,11 @@ window.onload = () => {
 
 	setTimeout(() => {
 		pause()
+
 	}, 6000);
 
 	setTimeout(() => {
-		!isOpened && play()
+		paused && play()
+
 	}, 6100);
 }
